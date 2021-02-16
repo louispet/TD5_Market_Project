@@ -38,10 +38,10 @@ class Book(Order):
         print(self)
     def __str__(self):
         res=""
-        for n in range(len(self.bookbuy)):
-            res+= "BUY  --------- Id : %i ------ Quantity %s @ Price %s\n" %(self.bookbuy[n].id,self.bookbuy[n].quantity,self.bookbuy[n].price)
         for n in range(len(self.booksell)):
             res+= "SELL  -------- Id : %i ------ Quantity %s @ Price %s\n" %(self.booksell[n].id,self.booksell[n].quantity,self.booksell[n].price)
+        for n in range(len(self.bookbuy)):
+            res+= "BUY  --------- Id : %i ------ Quantity %s @ Price %s\n" %(self.bookbuy[n].id,self.bookbuy[n].quantity,self.bookbuy[n].price)
         return res
     def sort(self):
         self.bookbuy= sorted(self.bookbuy,key=lambda Order: Order.price, reverse=True)
@@ -65,9 +65,8 @@ class Book(Order):
             "On soustrait le caener de vente du nombre de quantité de carnet d'achat"
             "On doit détruie l'ordre indice 0"
         if (self.bookbuy[i].quantity>self.booksell[i].quantity):
-            print("Execute order to %i share in %d price" %(self.bookbuy[i].quantity,self.bookbuy[i].price))
+            print("Execute order to %i share in %d price" %(self.booksell[i].quantity,self.booksell[i].price))
             temp=self.booksell[i].quantity
-            print(temp)
             self.booksell[i].quantity-self.bookbuy[i].quantity
             self.bookbuy[i].quantity-= temp
             del(self.booksell[i])
