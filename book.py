@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 class Order():
     cpt=1
     # Définition des variables
