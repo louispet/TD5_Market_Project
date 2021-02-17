@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import pandas
 class Order():
     cpt=1
     # Définition des variables
@@ -38,12 +39,21 @@ class Book(Order):
         self.verif_ordre()
         print(self)
     def __str__(self):
-        res=""
+        df1=pandas.DataFrame(columns=["Type","Price","Quantity"])
+        df2=pandas.DataFrame(columns=["Type","Price","Quantity"])
+        a=[]
+        b=[]
         for n in range(len(self.booksell)):
-            res+= "SELL  -------- Id : %i ------ Quantity %s @ Price %s\n" %(self.booksell[n].id,self.booksell[n].quantity,self.booksell[n].price)
+            b.append(self.booksell[n].id)
+            df2=df2.append({"Type":"SELL","Price":self.booksell[n].price,"Quantity":self.booksell[n].quantity},ignore_index=True)
         for n in range(len(self.bookbuy)):
-            res+= "BUY  --------- Id : %i ------ Quantity %s @ Price %s\n" %(self.bookbuy[n].id,self.bookbuy[n].quantity,self.bookbuy[n].price)
-        return res
+           a.append(self.bookbuy[n].id)
+           df1=df1.append({"Type":"BUY","Price":self.bookbuy[n].price,"Quantity":self.bookbuy[n].quantity},ignore_index=True)                                
+        df1.index=a
+        df2.index=b
+        print(df1)
+        print(df2)
+        return ""
     def sort(self):
         self.bookbuy= sorted(self.bookbuy,key=lambda Order: Order.price, reverse=True)
         self.booksell=sorted(self.booksell,key=lambda Order: Order.price)
