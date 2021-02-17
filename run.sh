@@ -10,12 +10,11 @@ fi
 #Activate the virtualenv if it exists and load the dependencies from the requirements.txt.
 if [[ -d .env ]]
 then
-	
+	source "$(pwd)/.env/bin/activate"
 	# Install any required pip packages
-	[ -r "$(pwd)/requirements.txt" ] && pip install --requirement "$(pwd)/requirements.tx"
+	[ -r "$(pwd)/requirements.txt" ] && pip install --requirement "$(pwd)/requirements.txt"
 	python3 "$(pwd)/main.py"
 	
 fi
-
 
 
