@@ -6,14 +6,12 @@ __You can find 6 files__
 
 ## Dependencies and project
 
-This file,__ README.md__ explain how we had built this project.
+This file, __README.md__ explain how we had built this project.
 
 __requirements.txt__ contains the dependencies. It will be used to reload the dependencies in a new virtualenv.
 
-__the gitignore__ file specifies intentionally untracked files that Git should ignore.
+__.gitignore__ file specifies intentionally untracked files that Git should ignore.
 Files already tracked by Git are not affected.
-
-Export dependencies with pip freeze >requirements.txt
  
 
 ## Bash file 
