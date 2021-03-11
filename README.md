@@ -1,26 +1,33 @@
 # TD5_Market_Project
 
-Export dependencies with pip freeze >requirements.txt
-
 this project is carried out as part of the finance course by Alexandra Nebout and Louis Peters.
 
-You can find 6 files. 
+__You can find 6 files__
 
-This file, README.md explain how we had built this project.
+## Dependencies and project
 
-requirements.txt contains the dependencies. It will be used to reload the dependencies in a new virtualenv.
+This file,__ README.md__ explain how we had built this project.
 
-the gitignore file specifies intentionally untracked files that Git should ignore. 
-Files already tracked by Git are not affected. 
+__requirements.txt__ contains the dependencies. It will be used to reload the dependencies in a new virtualenv.
 
-run.sh create the virtualenv if it does not exists, and load the dependencies from the requirements.txt. After that, it activate the virtualenv if it exists and run the main.py Python.
+__the gitignore__ file specifies intentionally untracked files that Git should ignore.
+Files already tracked by Git are not affected.
 
-main.py is the main program 
+Export dependencies with pip freeze >requirements.txt
+ 
 
-book.py contains the Book and Order objects to obtain a result log showing for each insert call.
+## Bash file 
+
+__run.sh__ create the virtualenv if it does not exists, and load the dependencies from the requirements.txt. After that, it activate the virtualenv if it exists and run the main.py Python.
+
+## Python files
+
+__main.py__ is the main program 
+
+__book.py__ contains the Book and Order objects to obtain a result log showing for each insert call.
 More particulary :
- the insert action details,
- the executed orders if any,
- the book state after insertion and execution.
+* the insert action details.
+* the executed orders if any.
+* the book state after insertion and execution.
 
 
