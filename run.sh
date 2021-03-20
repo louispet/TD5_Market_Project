@@ -1,6 +1,6 @@
 
 #!/bin/bash
-
+pip3 install virtualenv
 #Create the virtualenv if it does not exists
 if [[ ! -d .env ]]
 then
