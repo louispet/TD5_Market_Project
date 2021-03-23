@@ -4,6 +4,10 @@ this project is carried out as part of the finance course by Alexandra Nebout an
 
 __You can find 6 files__
 
+## WITH EC2 AWS 
+
+You will find an install.sh file. It allows you to download and install the configuration necessary for the execution of the __run.sh__ file
+
 ## Dependencies and project
 
 This file, __README.md__ explain how we had built this project.
